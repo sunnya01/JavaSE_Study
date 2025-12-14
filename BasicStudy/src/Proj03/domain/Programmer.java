@@ -2,7 +2,7 @@ package Proj03.domain;
 
 import Proj03.service.Status;
 
-public class Programmer extends Employee{
+public class Programmer extends Employee {
     private int memberId;
     private Status status;
     private Equipment equipment;
@@ -31,11 +31,18 @@ public class Programmer extends Employee{
         this.equipment = equipment;
     }
 
-    public Programmer(int id, String name, int age, double salary, Equipment equipment) {
+    public Programmer(int id, String name, int age, double salary, int memberId, Status status, Equipment equipment) {
         super(id, name, age, salary);
+        this.memberId = memberId;
+        this.status = status;
         this.equipment = equipment;
     }
 
     public Programmer() {
+    }
+
+    @Override
+    public String toString() {
+        return toString01() + "\t程序员\t" + this.status + "\t\t\t\t\t" + this.equipment.getDescription();
     }
 }

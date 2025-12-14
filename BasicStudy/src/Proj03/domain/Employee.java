@@ -44,7 +44,17 @@ public class Employee {
         this.age = age;
         this.salary = salary;
     }
-    public Employee(){
 
+    public Employee() {
+
+    }
+
+    @Override
+    public String toString() {
+        return this.id + "\t" + this.name + "\t" + this.age + "\t" + this.salary;
+    }
+
+    public String toString01() {
+        return this.id + "\t" + this.name + "\t" + this.age + "\t" + this.salary;
     }
 }
