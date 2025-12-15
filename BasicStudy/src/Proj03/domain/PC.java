@@ -1,19 +1,22 @@
 package Proj03.domain;
 
-public class PC implements Equipment{
+public class PC implements Equipment {
 
     private String model;//机器型号
     private String display;//机器名称
-    public PC(){
+
+    public PC() {
 
     }
-    public PC(String model,String display){
+
+    public PC(String model, String display) {
         this.model = model;
         this.display = display;
     }
+
     @Override
     public String getDescription() {
-        return this.model+'('+this.display+')';
+        return this.model + '(' + this.display + ')';
     }
 
     public String getModel() {

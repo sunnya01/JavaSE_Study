@@ -43,6 +43,13 @@ public class Programmer extends Employee {
 
     @Override
     public String toString() {
+
         return toString01() + "\t程序员\t" + this.status + "\t\t\t\t\t" + this.equipment.getDescription();
+
+    }
+
+    @Override
+    public String printInfo() {
+        return "  " + this.getMemberId() + "/" + this.getId() + "\t" + this.getName() + "\t" + this.getAge() + "\t" + this.getSalary();
     }
 }

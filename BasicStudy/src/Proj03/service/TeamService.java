@@ -16,6 +16,14 @@ public class TeamService {
     private Programmer[] team = new Programmer[MAX_MEMBER];
     private int total;
 
+    public int getTotal() {
+        return total;
+    }
+
+    public void setTotal(int total) {
+        this.total = total;
+    }
+
     public void addMember(Employee e) throws TeamException {
         int insert = 0;
         //1. 成员已满
@@ -63,6 +71,7 @@ public class TeamService {
     public void removeaMember(Employee e) throws TeamException {
         int i = CommonTools.isExsist(this.team, e);
         if (i == -1) throw new TeamException("成员不存在!");
+        this.team[i].setStatus(Status.VOCATION);
         this.team[i] = null;
     }
 

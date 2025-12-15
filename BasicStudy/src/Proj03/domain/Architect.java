@@ -26,4 +26,10 @@ public class Architect extends Designer {
         return toString01() + "\t架构师\t" + super.getStatus() + "\t" + super.getBonus()
                 + "\t" + this.stock + "\t" + super.getEquipment().getDescription();
     }
+
+    @Override
+    public String printInfo() {
+        return "  " + this.getMemberId() + "/" + this.getId() + "\t" + this.getName() + "\t" + this.getAge() + "\t" + this.getSalary()
+                + "\t" + "架构师" + "\t" + this.getBonus() + "\t" + this.getStock();
+    }
 }

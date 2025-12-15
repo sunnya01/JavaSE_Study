@@ -27,4 +27,9 @@ public class Designer extends Programmer {
         return toString01() + "\t设计师\t" + super.getStatus() + "\t" + this.bonus
                 + "\t\t\t" + super.getEquipment().getDescription();
     }
+
+    @Override
+    public String printInfo() {
+        return "  " + this.getMemberId() + "/" + this.getId() + "\t" + this.getName() + "\t" + this.getAge() + "\t" + this.getSalary() + "\t" + "设计师" + "\t" + this.getBonus();
+    }
 }

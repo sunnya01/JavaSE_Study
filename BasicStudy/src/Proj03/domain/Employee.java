@@ -57,4 +57,7 @@ public class Employee {
     public String toString01() {
         return this.id + "\t" + this.name + "\t" + this.age + "\t" + this.salary;
     }
+    public String printInfo(){
+        return "";
+    }
 }

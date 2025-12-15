@@ -1,12 +1,12 @@
 package Proj03.domain;
 
-public class Printer implements Equipment{
+public class Printer implements Equipment {
     private String name;//机器的名称
     private String type;//机器的类型
 
     @Override
     public String getDescription() {
-        return this.name+'('+this.type+')';
+        return this.name + '(' + this.type + ')';
     }
 
     public Printer() {
